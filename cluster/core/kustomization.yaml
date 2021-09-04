@@ -3,5 +3,6 @@ kind: Kustomization
 resources:
   - namespaces
   - metallb-system
+  - longhorn
   - cert-manager
   - system-upgrade
