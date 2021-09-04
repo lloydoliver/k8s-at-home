@@ -11,7 +11,7 @@ resources:
   - infracloudio-charts.yaml
   - jetstack-charts.yaml
   - k8s-at-home-charts.yaml
-  - longhorn-chars.yaml
+  - longhorn-charts.yaml
   - metallb-charts.yaml
   - minio-charts.yaml
   - nfs-subdir-external-provisioner-charts.yaml
