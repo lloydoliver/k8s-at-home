@@ -1,0 +1,9 @@
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: cluster-settings
+  namespace: flux-system
+data:
+  METALLB_LB_RANGE: 172.16.12.100-172.16.12.150
+  SVC_TRAEFIK_ADDR: 172.16.12.150
