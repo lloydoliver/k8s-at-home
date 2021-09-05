@@ -26,13 +26,14 @@ spec:
       defaultEnable: false
       namespaceSelector:
         matchNames:
+          - core
           - home
           - networking
       name: "Such Devops UK"
-      customApps:
-        - name: Longhorn
-          url: "https://longhorn.suchdevops.uk"
-          icon: harddisk
+#      customApps:
+#        - name: Longhorn
+#          url: "https://longhorn.suchdevops.uk"
+#          icon: harddisk
       groups:
         - name: Communicate
           links:
@@ -46,14 +47,6 @@ spec:
           links:
             - name: Cloudflare
               url: "https://dash.cloudflare.com"
-            - name: Dropbox
-              url: "https://dropbox.com"
-            - name: Drive
-              url: "https://drive.google.com"
-        - name: Cluster Ops
-          links:
-            - name: Longhorn
-              url: "https://longhorn.suchdevops.uk"
         - name: Dev
           links:
             - name: k8s-at-home Repo
@@ -80,7 +73,7 @@ spec:
         ingressClassName: "traefik"
         annotations:
           traefik.ingress.kubernetes.io/router.entrypoints: "websecure"
-          hajimari.io/enable: "true"
+          hajimari.io/enable: "false"
           hajimari.io/icon: "weather-sunset"
         hosts:
           - host: "hajimari.${SECRET_DOMAIN}"
