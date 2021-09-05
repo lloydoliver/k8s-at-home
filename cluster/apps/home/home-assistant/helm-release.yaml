@@ -5,17 +5,46 @@ metadata:
   name: home-assistant
   namespace: home
 spec:
-  interval: 5m
+  interval: 1h
   chart:
     spec:
       # renovate: registryUrl=https://hajimari.io
       chart: home-assistant
-      version: 10.1.0
+      version: 5.2.1
       sourceRef:
         kind: HelmRepository
         name: k8s-at-home
         namespace: flux-system
-      interval: 5m
   values:
+    image:
+      repository: homeassistant/home-assistant
+      tag: 2021.9.2
     env:
       TZ: "Europe/London"
+    persistence:
+      config:
+        enabled: true
+        existingClaim: homeassistant-config
+    ingress:
+      main:
+        enabled: true
+        ingressClassName: "traefik"
+        annotations:
+          traefik.ingress.kubernetes.io/router.entrypoints: "websecure"
+          hajimari.io/enable: "true"
+          hajimari.io/icon: "home-assistant"
+          hajimari.io/appName: "HassIO"
+        hosts:
+          - host: "hassio.${SECRET_DOMAIN}"
+            paths:
+              - path: /
+                pathType: Prefix
+        tls:
+          - hosts:
+              - "hassio.${SECRET_DOMAIN}"
+    resources:
+      limits:s
+        memory: 500Mi
+      requests:
+        cpu: 35m
+        memory: 150Mi
