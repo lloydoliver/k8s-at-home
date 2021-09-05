@@ -26,9 +26,9 @@ spec:
       defaultEnable: false
       namespaceSelector:
         matchNames:
-          - default
+          - home
           - networking
-      name: "you"
+      name: "Such Devops UK"
       customApps:
         - name: Longhorn
           url: "https://longhorn.suchdevops.uk"
