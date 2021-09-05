@@ -9,16 +9,16 @@ stringData:
     HASS_MQTT_USERNAME: ENC[AES256_GCM,data:qpQs5kr5JsBE6ls=,iv:VkxaeQ6Xl12Kt17QRmnvESLCHyoaMIIXLQ6iXOaF6Is=,tag:QZlwX8nmJXuIUSYONyY3Pg==,type:str]
     HASS_LIFE360_USERNAME: ENC[AES256_GCM,data:8Mn+ddP//RI6D6rLQ7cvqQ+L77UhmkMI,iv:o4QXkFcAJ9BxH/xU+dFd7sDROtiZh/iOvf5CRMO2/T4=,tag:39WYDCDTVKnTDDqAlCIrFQ==,type:str]
     HASS_LIFE360_PASSWORD: ENC[AES256_GCM,data:Onm50nYNn6s=,iv:QVI2Dbnlv2biRwgP4HcLZHCTnsHjMYiA3RkKbe+k+C8=,tag:DKzqBihXGpuKeCwGJWRyRA==,type:str]
-    HASS_LATITUDE: ENC[AES256_GCM,data:SKWiT5zTh0Cx6w==,iv:epq4cEp8IFe2M0yi8uhx6Jw3GBCgiHWi/xH2Hbkw1VI=,tag:xep6sjc1mKmJIwOSELgRtA==,type:float]
-    HASS_LONGITUDE: ENC[AES256_GCM,data:jU4EjwZ22z6O2WZP0gSuhg==,iv:/FfYS4ptLMa6YEMfz51LM7eVZZ5TwZKZ8z9AYj7yf7w=,tag:MpbuzELJCbbg7KtmYd2pqQ==,type:str]
+    HASS_LATITUDE: ENC[AES256_GCM,data:AwRDD4HuJpnTbg==,iv:qboyA21NajpP5iidtpX9minG/xRb4mhJv0mgeSfrEA0=,tag:IcCB1FGdXX9PJ2uQ5eF32w==,type:str]
+    HASS_LONGITUDE: ENC[AES256_GCM,data:36mpWEE9ei6IaQ==,iv:xAVlQDGxxxH8XMgemsEaS3taxtFgzNaxz+xY+PODeh4=,tag:XXad3OdMqTcOOoFRq4CZ2Q==,type:str]
 sops:
     kms: []
     gcp_kms: []
     azure_kv: []
     hc_vault: []
     age: []
-    lastmodified: "2021-09-05T19:11:33Z"
-    mac: ENC[AES256_GCM,data:oTj/PzWYUDHzl/pn2ps7vJNhd/p6hTMCHCubuSdjTiRndLsw+MdseBT8tCilcuqKbopXlhDOaK08AJeJUX0HR96WjVQcGCwA1C3CZxOWJb2+uQD8urdlRC3QNN6WAqBYY2QEPnCGtMtKy4a6PgEfxE4w7gdPFr3+f2w7BLsl+wY=,iv:a4IWT0879wej0rkQ2K+omxm1nrei7Kk7oohi4fHFagY=,tag:Z9MJ0AB1deZKfeKjcVyWTg==,type:str]
+    lastmodified: "2021-09-05T19:48:13Z"
+    mac: ENC[AES256_GCM,data:J/b9pdyJIlpcKzEWdjiLWBLcx/l+QrJ+27ul0IBfmUGk+4No1RsFW3sHkdyS7KalrqbupSeC7z9KKqr8qz35VMDWiUPiLK5iQLQs4eSTv5NSJXgSDjROCeFPV5DYzUsibQTOyHZm/pUeBHUzXj+lzIRIORUVf8Xovr469lQlro8=,iv:90M+k7fcJMBByN47kymj4Vd3pw9ZyxfwMrJf+Sq/MLw=,tag:xrwVhnHMo3LWWpAyOWVtzw==,type:str]
     pgp:
         - created_at: "2021-09-05T19:11:31Z"
           enc: |
