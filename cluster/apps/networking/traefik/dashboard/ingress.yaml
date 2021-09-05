@@ -26,15 +26,3 @@ spec:
                 name: traefik
                 port:
                   number: 9000
-  values:
-    ingress:
-      enabled: true
-      ingressClassName: "traefik"
-      host: "traefik.${SECRET_DOMAIN}"
-      tlsSecret: "${SECRET_DOMAIN/./-}-tls"
-      tls: true
-      annotations:
-        kubernetes.io/ingress.class: traefik
-        traefik.ingress.kubernetes.io/rule-type: PathPrefixStrip
-        kubernetes.io/tls-acme: "true"
-        cert-manager.io/cluster-issuer: letsencrypt-prod
