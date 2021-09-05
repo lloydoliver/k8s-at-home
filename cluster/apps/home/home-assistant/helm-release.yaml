@@ -58,10 +58,6 @@ spec:
         enabled: false
       readiness:
         enabled: false
-    persistence:
-      config:
-        enabled: true
-        existingClaim: homeassistant-config
     addons:
       codeserver:
         enabled: true
