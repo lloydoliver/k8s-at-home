@@ -26,7 +26,7 @@ spec:
       taintToleration: arm=true:NoExecute
     ingress:
       enabled: true
-      host: "longhorn.k.${SECRET_DOMAIN}"
+      host: "longhorn.${SECRET_DOMAIN}"
       tlsSecret: longhorn-cert
       tls: true
       annotations:
