@@ -43,7 +43,7 @@ spec:
           - hosts:
               - "hassio.${SECRET_DOMAIN}"
     resources:
-      limits:s
+      limits:
         memory: 500Mi
       requests:
         cpu: 35m
