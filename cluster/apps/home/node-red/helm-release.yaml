@@ -22,6 +22,8 @@ spec:
       tag: v2.0.6
     env:
       TZ: "Europe/London"
+      PUID: 1000
+      PGID: 1000
       NODE_RED_ENABLE_PROJECTS: "true"
       NODE_RED_ENABLE_SAFE_MODE: "false"
     ingress:
