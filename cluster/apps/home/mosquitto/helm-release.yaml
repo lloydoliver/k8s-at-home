@@ -36,10 +36,10 @@ spec:
       data:
         enabled: true
         existingClaim: mosquitto-config
-#      configinc:
-#        enabled: true
-#        type: custom
-#        volumeSpec:
-#          secret:
-#            secretName: mosquitto-config
+      configinc:
+        enabled: true
+        type: custom
+        volumeSpec:
+          secret:
+            secretName: mosquitto-config
  
