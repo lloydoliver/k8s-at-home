@@ -21,6 +21,11 @@ spec:
       tag: 2021.9.3
     env:
       TZ: "Europe/London"
+    http:
+      use_x_forwarded_for: true
+      trusted_proxies: 
+        - 127.0.0.1
+        - 10.0.0.0/8
     persistence:
       config:
         enabled: true
