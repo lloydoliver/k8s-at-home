@@ -41,6 +41,11 @@ spec:
         hajimari.io/instance: "internal"
         hajimari.io/appName: "HassIO"
         hajimari.io/group: "Home Automation"
+    probes:
+      liveness:
+        enabled: false
+      readiness:
+        enabled: false
     resources:
       limits:
         memory: 500Mi
