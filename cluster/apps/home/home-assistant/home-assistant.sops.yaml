@@ -1,0 +1,64 @@
+# yamllint disable
+apiVersion: v1
+kind: Secret
+metadata:
+    name: home-assistant
+    namespace: home
+stringData:
+    HASS_MQTT_PASSWORD: ENC[AES256_GCM,data:N4m2IfM2COov9P2rP32sWiqlRqidpV7Mf9jiqgkNp8hMKMtW8/zaQn6JEVwzXhx776dMpOEY+uXy76D5o0B9XPYiU5dllyAmt0z/3d0AlBhBB2ZxRrmSJkLgCEZXZW4jaQAEkO6Sdg+QOccRsW7jI5N/4yu6bsHV36mF5ehp2wQ=,iv:59t4U6JwXvuqSbUG6lvVN0iDBQDD6R3w5Jio2sya6Xg=,tag:GqihlUVBHOg76h7u0h9lgA==,type:str]
+    HASS_MQTT_USERNAME: ENC[AES256_GCM,data:qpQs5kr5JsBE6ls=,iv:VkxaeQ6Xl12Kt17QRmnvESLCHyoaMIIXLQ6iXOaF6Is=,tag:QZlwX8nmJXuIUSYONyY3Pg==,type:str]
+    HASS_LIFE360_USERNAME: ENC[AES256_GCM,data:8Mn+ddP//RI6D6rLQ7cvqQ+L77UhmkMI,iv:o4QXkFcAJ9BxH/xU+dFd7sDROtiZh/iOvf5CRMO2/T4=,tag:39WYDCDTVKnTDDqAlCIrFQ==,type:str]
+    HASS_LIFE360_PASSWORD: ENC[AES256_GCM,data:Onm50nYNn6s=,iv:QVI2Dbnlv2biRwgP4HcLZHCTnsHjMYiA3RkKbe+k+C8=,tag:DKzqBihXGpuKeCwGJWRyRA==,type:str]
+    HASS_LATITUDE: ENC[AES256_GCM,data:SKWiT5zTh0Cx6w==,iv:epq4cEp8IFe2M0yi8uhx6Jw3GBCgiHWi/xH2Hbkw1VI=,tag:xep6sjc1mKmJIwOSELgRtA==,type:float]
+    HASS_LONGITUDE: ENC[AES256_GCM,data:jU4EjwZ22z6O2WZP0gSuhg==,iv:/FfYS4ptLMa6YEMfz51LM7eVZZ5TwZKZ8z9AYj7yf7w=,tag:MpbuzELJCbbg7KtmYd2pqQ==,type:str]
+sops:
+    kms: []
+    gcp_kms: []
+    azure_kv: []
+    hc_vault: []
+    age: []
+    lastmodified: "2021-09-05T19:11:33Z"
+    mac: ENC[AES256_GCM,data:oTj/PzWYUDHzl/pn2ps7vJNhd/p6hTMCHCubuSdjTiRndLsw+MdseBT8tCilcuqKbopXlhDOaK08AJeJUX0HR96WjVQcGCwA1C3CZxOWJb2+uQD8urdlRC3QNN6WAqBYY2QEPnCGtMtKy4a6PgEfxE4w7gdPFr3+f2w7BLsl+wY=,iv:a4IWT0879wej0rkQ2K+omxm1nrei7Kk7oohi4fHFagY=,tag:Z9MJ0AB1deZKfeKjcVyWTg==,type:str]
+    pgp:
+        - created_at: "2021-09-05T19:11:31Z"
+          enc: |
+            -----BEGIN PGP MESSAGE-----
+
+            hQIMAxlXSe08L3iIAQ/+NPswZ5LP4mdt4WIIzYS2tmCyQ8V6vQtEOmdgXyC2dXNC
+            48rNE7IV1NDPfNTnEBtRn2oPNwS7wnnuBpjXhcZs1Br8rrjxkFv9Pxhbi4nOVrdc
+            RKVgNQ06oj3FVAIOfc2CtY2Xt8UOP9W2Hzzq8b0UqqAg3R6sKl+7f/R+bG6ov8M1
+            VHAHJJdrCGaN5ccPFlm9htjBZ1fsOfkbx25AiDkO0SvQbKGcS4+0GYeFVFTFVHci
+            KznNvNhdA+TG9jowPeX8mH9VFhp+SGQou7gqrioRVgIqlq1Lt8v7bZbP7Yg+uHAY
+            MH5VV59xQ68tua7tZyhRmiJcPcCI8K6TuHINnFxGhhohvVpjm6hmSnsoRj2+Pl8u
+            N93Dnik8Mw1X++HHZwTE+JYi07DEOZ/bh4GsyCNyGtKur0m4cSHEj9bgFnNwuG25
+            B/2EJeyvkOdc/GPbK1EcMybMpiZQwN54sNR7RPGUirem13qh+0Nel+7Dl0F5zr2j
+            cciA6qUHFM3gS6aR3Oe8MA/u8Yu/GiwfhTKDnOhN2UDwrV8jGWUalCW+6bWf+q7P
+            fdPp1eiuGKQ1E+kA824x+LWMh2HU1eA0CLey/wzxbGxN3PTlBMyTLIb1qV4vJYHS
+            ypOcKray8/8dmQPVl9EuicA8e9yluOHw6jWFNYwOUSrqkiRJSY8EEikgjuHfhy7S
+            XgEd/o/7rt11EnEZ48cKAZ+w+y2OJMFR9NAlUGnnyM9PtSkgYhmwY2TVw5YjJS+k
+            7Oyrj2MsXP7HARgXAGjhGla/BxMw0t48QJaBL2Eg2DAjT389yZlywd4cfp7vdG4=
+            =EqOF
+            -----END PGP MESSAGE-----
+          fp: D7E3AE409839E53D99E03033E3121149CD2C4A48
+        - created_at: "2021-09-05T19:11:31Z"
+          enc: |
+            -----BEGIN PGP MESSAGE-----
+
+            hQIMAwWz9VMtuJddAQ/+P1TWKckFKHC7yyxvgJLeE6L2PF0Z1/OTaO+8H3mZWvyz
+            qpe4yAE/+Nx84Fl07Qamw8zK4S9iluI943nJZ7FXUPptPQBZ5gUHsrEIxRW/gmaO
+            LdW1/geJWPRHRVynhHT9BjT0Pzv1LUmGL3owGw2d5f3/pY3LlQxVgEdDG8BpB6Wu
+            WTcRnoplxyqRuLiHrZ9Y0NL2lW6fbAtZulIbmy8MBMhCZoRd5jpJUZvkhc6Vq1U0
+            oMrI6IEp+bU46SiWrHFAqjWXOE2mdwWv8iWqO4aEJb3rl+A1u4dL2rT/csZkhYn6
+            lbRSaMiOKFPWeO4UYMTlKCi8BU4gEg7Ucc1wSxoDjTqdGElUYQyZlnF96Pf/86Ms
+            FUSNcM26ahkIkFkvg1HQKoBVb52F4uHUa9E9TsTREdSuY/Mv6SIgJcjw1a5sH2MS
+            bhLoc0yDkCaY7C7Kg/fanraC7EtUHGDY9IJSxKk3/RwvE1mZdfNpHTx6LcEx2b+3
+            jvaj1NId70WOlA6+OK7vO6pA9003OkOpa90dbXdGuYcDXr+jzE8C/xtBBmLcLqtr
+            FoejGqSSb8ySH0IW8tWnVFeGhDpwHmR/VWEsR9nvKpOrS+0mxuDK+OF0LZdtQVh9
+            3ATRv6p+MdPboAtS+Z+ub5L0ce0koIFxe2b4rAvcPmVfwsqHyuk6YDTw19bFqqjS
+            XgFkgbfkkovzWQL/X4gChPq9imslsZ3/Vy4IlezOGq88rGfXH8fAFJ5fvcHu+YK2
+            5MqpjeVd9OIDDH88PNTKWeOJpyxNcqkLNe3Y87qs6Rzxo6rhnNTpiV6Pe2t6Aqw=
+            =HJgw
+            -----END PGP MESSAGE-----
+          fp: 6A26EC621F5482FA6A638E2A02E879357525DBCB
+    encrypted_regex: ^(data|stringData)$
+    version: 3.7.1
