@@ -50,6 +50,10 @@ spec:
               url: "https://dropbox.com"
             - name: Drive
               url: "https://drive.google.com"
+        - name: Dev
+          links:
+            - name: k8s-at-home Repo
+              url: https://github.com/lloydoliver/k8s-at-home
         - name: Media
           links:
             - name: Spotify
