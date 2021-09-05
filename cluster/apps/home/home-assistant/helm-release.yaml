@@ -26,22 +26,21 @@ spec:
         enabled: true
         existingClaim: homeassistant-config
     ingress:
-      main:
-        enabled: true
-        ingressClassName: "traefik"
-        annotations:
-          traefik.ingress.kubernetes.io/router.entrypoints: "websecure"
-          hajimari.io/enable: "true"
-          hajimari.io/icon: "home-assistant"
-          hajimari.io/appName: "HassIO"
-        hosts:
-          - host: "hassio.${SECRET_DOMAIN}"
-            paths:
-              - path: /
-                pathType: Prefix
-        tls:
-          - hosts:
-              - "hassio.${SECRET_DOMAIN}"
+      enabled: true
+      ingressClassName: "traefik"
+      host: "hassio.${SECRET_DOMAIN}"
+      tlsSecret: "${SECRET_DOMAIN/./-}-tls"
+      tls: true
+      annotations:
+        kubernetes.io/ingress.class: traefik
+        traefik.ingress.kubernetes.io/rule-type: PathPrefixStrip
+        kubernetes.io/tls-acme: "true"
+        cert-manager.io/cluster-issuer: letsencrypt-prod
+        hajimari.io/enable: "true"
+        hajimari.io/icon: "home-assistant"
+        hajimari.io/instance: "internal"
+        hajimari.io/appName: "HassIO"
+        hajimari.io/group: "Home Automation"
     resources:
       limits:
         memory: 500Mi
