@@ -3,5 +3,5 @@ kind: Kustomization
 resources:
   - hajimari
   - home-assistant
-  - mosquitto
-  - node-red
+#  - mosquitto
+#  - node-red
