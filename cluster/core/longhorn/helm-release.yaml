@@ -28,7 +28,7 @@ spec:
       enabled: true
       ingressClassName: "traefik"
       host: "longhorn.${SECRET_DOMAIN}"
-      tlsSecret: longhorn-cert
+      tlsSecret: "${SECRET_DOMAIN/./-}-tls"
       tls: true
       annotations:
         kubernetes.io/ingress.class: traefik
