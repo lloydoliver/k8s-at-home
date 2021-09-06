@@ -23,14 +23,15 @@ spec:
     env:
       TZ: "Europe/London"
     hajimari:
-      defaultEnable: false
+      defaultEnable: true
       namespaceSelector:
         matchNames:
           - core
           - home
-          - networking
-          - monitoring
           - longhorn-system
+          - monitoring
+          - networking
+          - pihole
       name: "Lloyd"
       groups:
         - name: Communicate
