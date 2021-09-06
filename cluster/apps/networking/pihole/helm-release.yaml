@@ -66,8 +66,7 @@ spec:
       enabled: true
       existingClaim: "pihole-config"
 
-    DNS1: "9.9.9.9"
-    DNS2: "149.112.112.112"
+    DNS1: "${SVC_UNBOUND_ADDR}"
 
     adlists:
       - https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts
