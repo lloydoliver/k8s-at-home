@@ -1,5 +1,6 @@
 ignore: |
   *.sops.*
+  README.md
   gotk-components.yaml
 extends: default
 rules:
