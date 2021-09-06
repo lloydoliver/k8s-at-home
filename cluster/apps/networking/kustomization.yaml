@@ -4,4 +4,4 @@ resources:
   - traefik
   - wildcard-certificate
   - error-pages
-#  - pihole
+  - pihole
