@@ -5,4 +5,4 @@ resources:
   - hajimari
   - home-assistant
   - mosquitto
-#  - node-red
+  - node-red
