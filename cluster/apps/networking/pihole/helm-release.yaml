@@ -43,6 +43,9 @@ spec:
         hajimari.io/enable: "true"
         hajimari.io/icon: "pi-hole"
 
+    serviceDhcp:
+      enabled: false
+
     serviceDns:
       type: LoadBalancer
       externalTrafficPolicy: Local
