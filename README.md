@@ -36,12 +36,16 @@
 
 [BotKube](https://www.botkube.io/) - Messaging bot for monitoring Kubernetes  
 [cert-manager](https://cert-manager.io/) - SSL certificates - with Cloudflare DNS challenge  
+[error-pages](ghcr.io/tarampampam/error-pages) - docker image containing http error pages  
 [hajimari](https://github.com/toboshii/hajimari) - start page with ingress discovery  
 [Home Assistant](https://www.home-assistant.io/) - Home automation tooling  
 [Longhorn](https://longhorn.io) - Storage provider  
 [metallb](https://metallb.universe.tf/) - bare metal load balancer  
 [Mosquitto](https://mosquitto.org/) - MQTT Broker  
+[node-red](https://nodered.org/) - Flow editor  
+[PiHole](https://pi-hole.net/) - DNS and Network Ad-Blocker  
 [traefik](https://traefik.io) - ingress controller  
+[Unbound](https://www.nlnetlabs.nl/projects/unbound/about/) - validating, recursive, caching DNS resolver  
 
 ## :handshake:&nbsp; Thanks
 
