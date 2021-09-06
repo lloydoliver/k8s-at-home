@@ -44,7 +44,7 @@ spec:
       fallbackApiVersion: v1
     ingressRoute:
       dashboard:
-        enabled: false
+        enabled: true
     globalArguments:
       - "--api.dashboard=true"
       - "--api.insecure=true"
