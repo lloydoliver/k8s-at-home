@@ -29,7 +29,7 @@ spec:
           - core
           - home
           - networking
-      name: "Such Devops UK"
+      name: "Lloyd"
 #      customApps:
 #        - name: Longhorn
 #          url: "https://longhorn.suchdevops.uk"
