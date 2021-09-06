@@ -1,0 +1,93 @@
+---
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: pihole
+  namespace: pihole
+spec:
+  releaseName: pihole
+  chart:
+    spec:
+      chart: pihole
+      version: 2.1.2
+      sourceRef:
+        kind: HelmRepository
+        name: mojo2600
+        namespace: flux-system
+  interval: 5m
+  install:
+    remediation:
+      retries: 3
+  test:
+    enable: false
+  values:
+    admin:
+      existingSecret: "pihole-secrets"
+      passwordKey: "password"
+
+    ingress:
+      enabled: true
+      ingressClassName: "traefik"
+      host: "pihole.${SECRET_DOMAIN}"
+      tlsSecret: "${SECRET_DOMAIN/./-}-tls"
+      tls: true
+      annotations:
+        kubernetes.io/ingress.class: traefik
+        traefik.ingress.kubernetes.io/rule-type: PathPrefixStrip
+        kubernetes.io/tls-acme: "true"
+        cert-manager.io/cluster-issuer: letsencrypt-prod
+        hajimari.io/enable: "true"
+        hajimari.io/icon: "pi-hole"
+
+    serviceDns:
+      type: LoadBalancer
+      externalTrafficPolicy: Local
+      loadBalancerIP: "${SVC_PIHOLE_ADDR}"
+      annotations:
+        metallb.universe.tf/allow-shared-ip: pihole-svc
+
+    serviceWeb:
+      type: LoadBalancer
+      externalTrafficPolicy: Local
+      loadBalancerIP: "${SVC_PIHOLE_ADDR}"
+      annotations:
+        metallb.universe.tf/allow-shared-ip: pihole-svc
+
+    virtualHost: "pihole.${SECRET_DOMAIN}"
+
+    persistentVolumeClaim:
+      enabled: true
+      existingClaim: "pihole-config"
+
+
+    # OpenDNS family shield:
+    DNS1: "9.9.9.9"
+    DNS2: "149.112.112.112"
+
+    dnsmasq:
+      upstreamServers: []
+      # Here you can add upstream dns servers with. All lines will be added to the
+      # pihole dnsmasq configuration.
+      # The format should be like:
+      # - server=/foo.bar/192.168.178.10
+      # - server=/bar.foo/192.168.178.11
+
+
+      customDnsEntries: []
+      # Here you can add custom dns entries to override the
+      # dns resolution with. All lines will be added to the
+      # pihole dnsmasq configuration.
+      # The format should be like:
+      # - address=/foo.bar/192.168.178.10
+      # - address=/bar.foo/192.168.178.11
+
+
+      additionalHostsEntries: []
+      # Dnsmasq reads the /etc/hosts file to resolve ips. You can add additional entries if you like
+      # - 192.168.0.3     host4
+      # - 192.168.0.4     host5
+
+    podDnsConfig:
+      nameservers:
+        - 127.0.0.1
+        - 9.9.9.9
