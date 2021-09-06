@@ -4,6 +4,9 @@ kind: PersistentVolumeClaim
 metadata:
   name: node-red-config
   namespace: home
+  annotations:
+    pv.beta.kubernetes.io/gid: "1000"
+    volume.beta.kubernetes.io/mount-options: "uid=1000,gid=1000"
 spec:
   accessModes:
     - ReadWriteOnce
