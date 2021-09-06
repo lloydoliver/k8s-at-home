@@ -30,6 +30,7 @@ spec:
           - home
           - networking
           - monitoring
+          - longhorn-system
       name: "Lloyd"
       groups:
         - name: Communicate
