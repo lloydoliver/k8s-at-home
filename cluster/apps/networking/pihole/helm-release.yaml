@@ -28,10 +28,13 @@ spec:
 
     ingress:
       enabled: true
-      ingressClassName: "traefik"
-      host: "pihole.${SECRET_DOMAIN}"
-      tlsSecret: "${SECRET_DOMAIN/./-}-tls"
-      tls: true
+      path: /
+      hosts:
+        - pihole.${SECRET_DOMAIN}
+      tls:
+        - secretName: "${SECRET_DOMAIN/./-}-tls"
+          hosts:
+            - pihole.${SECRET_DOMAIN}
       annotations:
         kubernetes.io/ingress.class: traefik
         traefik.ingress.kubernetes.io/rule-type: PathPrefixStrip
