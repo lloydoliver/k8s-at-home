@@ -26,15 +26,16 @@ spec:
       host: "tasmota.${SECRET_DOMAIN}"
       tls:
         - secretName: "${SECRET_DOMAIN/./-}-tls"
-          host: "tasmota.${SECRET_DOMAIN}"
+          hosts:
+            - "tasmota.${SECRET_DOMAIN}"
       annotations:
         kubernetes.io/ingress.class: traefik
         traefik.ingress.kubernetes.io/rule-type: PathPrefixStrip
         kubernetes.io/tls-acme: "true"
         cert-manager.io/cluster-issuer: letsencrypt-prod
         hajimari.io/enable: "true"
-#        hajimari.io/icon: "home-automation"
-#        hajimari.io/appName: "Tasmo Admin"
+        hajimari.io/icon: "home-automation"
+        hajimari.io/appName: "Tasmo Admin"
     persistence:
       config:
         enabled: true
