@@ -25,7 +25,8 @@ spec:
       path: /
       host: "tasmota.${SECRET_DOMAIN}"
       tls:
-        - hosts:
+        - secretName: "${SECRET_DOMAIN/./-}-tls"
+          hosts:
             - "tasmota.${SECRET_DOMAIN}"
       annotations:
         kubernetes.io/ingress.class: traefik
