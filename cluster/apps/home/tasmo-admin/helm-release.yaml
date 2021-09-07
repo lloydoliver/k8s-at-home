@@ -33,8 +33,8 @@ spec:
         kubernetes.io/tls-acme: "true"
         cert-manager.io/cluster-issuer: letsencrypt-prod
         hajimari.io/enable: "true"
-        hajimari.io/icon: "home-automation"
-        hajimari.io/appName: "Tasmo Admin"
+#        hajimari.io/icon: "home-automation"
+#        hajimari.io/appName: "Tasmo Admin"
     persistence:
       config:
         enabled: true
