@@ -6,4 +6,4 @@ resources:
   - home-assistant
   - mosquitto
   - node-red
-  - tasmota
+  - tasmo-admin
