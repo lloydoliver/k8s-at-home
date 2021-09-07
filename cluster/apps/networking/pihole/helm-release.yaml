@@ -71,7 +71,7 @@ spec:
 
     dnsmasq:
       customDnsEntries:
-        - address=/.${SECRET-DOMAIN}/${SVC_TRAEFIK_ADDR}
+        - "address=/.${SECRET-DOMAIN}/${SVC_TRAEFIK_ADDR}"
 
     adlists:
       - https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts
