@@ -6,4 +6,3 @@ resources:
   - home-assistant
   - mosquitto
   - node-red
-  - focalboard
