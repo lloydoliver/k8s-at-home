@@ -136,14 +136,22 @@
       "automerge": true,
       "automergeType": "branch",
       "requiredStatusChecks": null,
-      "matchUpdateTypes": ["minor", "patch"]
+      "matchUpdateTypes": ["minor", "patch"],
+      "schedule": [
+        "after 1am",
+        "before 4am"
+      ]
     },
     {
       "matchDatasources": ["helm"],
       "automerge": true,
       "automergeType": "branch",
       "requiredStatusChecks": null,
-      "matchUpdateTypes": ["minor", "patch"]
+      "matchUpdateTypes": ["minor", "patch"],
+      "schedule": [
+        "after 1am",
+        "before 4am"
+      ]
     },
     // group packages
     {
