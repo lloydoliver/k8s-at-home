@@ -130,31 +130,20 @@
       "semanticCommitType": "fix",
       "labels": ["renovate/helm", "dep/patch"]
     },
-    // pin package versions
-    {
-      "matchDatasources": ["docker"],
-      "allowedVersions": "<13",
-      "matchPackageNames": [
-        "postgres",
-        "prodrigestivill/postgres-backup-local"
-      ]
-    },
-    {
-      "matchDatasources": ["docker"],
-      "allowedVersions": "<2",
-      "matchPackageNames": ["influxdb"]
-    },
     // enable auto-merge
     {
       "matchDatasources": ["docker"],
       "automerge": true,
       "automergeType": "branch",
       "requiredStatusChecks": null,
-      "matchUpdateTypes": ["minor", "patch"],
-      "matchPackageNames": [
-        "ghcr.io/k8s-at-home/jackett",
-        "ghcr.io/k8s-at-home/prowlarr-nightly"
-     ]
+      "matchUpdateTypes": ["minor", "patch"]
+    },
+    {
+      "matchDatasources": ["helm"],
+      "automerge": true,
+      "automergeType": "branch",
+      "requiredStatusChecks": null,
+      "matchUpdateTypes": ["minor", "patch"]
     },
     // group packages
     {
