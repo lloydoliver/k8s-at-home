@@ -32,8 +32,7 @@ spec:
       hosts:
         - pihole.${SECRET_DOMAIN}
       tls:
-        - secretName: "${SECRET_DOMAIN/./-}-tls"
-          hosts:
+        - hosts:
             - pihole.${SECRET_DOMAIN}
       annotations:
         kubernetes.io/ingress.class: traefik
