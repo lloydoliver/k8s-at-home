@@ -17,6 +17,10 @@ spec:
         namespace: flux-system
       interval: 5m
   values:
+    podSecurityContext:
+      runAsUser: 0
+      runAsGroup: 0
+      fsGroup: 0
     fullnameOverride: prometheus
     prometheus:
       ingress:
@@ -28,7 +32,8 @@ spec:
         hosts:
           - "prometheus.${SECRET_DOMAIN}"
         tls:
-          - hosts:
+          - secretName: "prometheus-${SECRET_DOMAIN/./-}-tls"
+            hosts:
               - "prometheus.${SECRET_DOMAIN}"
       prometheusSpec:
         storageSpec:
@@ -68,7 +73,8 @@ spec:
         hosts:
           - "alert-manager.${SECRET_DOMAIN}"
         tls:
-          - hosts:
+          - secretName: "alert-manager-${SECRET_DOMAIN/./-}-tls"
+            hosts:
               - "alert-manager.${SECRET_DOMAIN}"
       alertmanagerSpec:
         storage:
