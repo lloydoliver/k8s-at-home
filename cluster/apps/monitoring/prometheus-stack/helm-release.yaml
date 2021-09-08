@@ -25,7 +25,6 @@ spec:
         ingressClassName: "traefik"
         annotations:
           traefik.ingress.kubernetes.io/router.entrypoints: "websecure"
-          cert-manager.io/cluster-issuer: letsencrypt-prod
         hosts:
           - "prometheus.${SECRET_DOMAIN}"
         tls:
@@ -61,17 +60,16 @@ spec:
                 icon_url: https://avatars3.githubusercontent.com/u/3380462
                 username: "Prometheus"
       ingress:
-      enabled: true
-      pathType: Prefix
-      ingressClassName: "traefik"
-      annotations:
-        traefik.ingress.kubernetes.io/router.entrypoints: "websecure"
-        cert-manager.io/cluster-issuer: letsencrypt-prod
-      hosts:
-        - "alert-manager.${SECRET_DOMAIN}"
-      tls:
-        - hosts:
-            - "alert-manager.${SECRET_DOMAIN}"
+        enabled: true
+        pathType: Prefix
+        ingressClassName: "traefik"
+        annotations:
+          traefik.ingress.kubernetes.io/router.entrypoints: "websecure"
+        hosts:
+          - "alert-manager.${SECRET_DOMAIN}"
+        tls:
+          - hosts:
+              - "alert-manager.${SECRET_DOMAIN}"
       alertmanagerSpec:
         storage:
           volumeClaimTemplate:
