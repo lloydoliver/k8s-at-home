@@ -8,4 +8,4 @@ resources:
   - node-red
   - tasmo-admin
   - vaultwarden
-  - velero
+#  - velero
