@@ -42,7 +42,7 @@ spec:
             name: plugins
       - name: velero-plugin-for-longhorn
         image: quay.io/jenting/velero-plugin:main
-        imagePullPolicy: ifNotPresent
+        imagePullPolicy: Always
         volumeMounts:
           - mountPath: /target
             name: plugins
