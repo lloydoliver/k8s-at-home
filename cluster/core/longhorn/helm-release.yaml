@@ -26,6 +26,7 @@ spec:
       storageMinimalAvailablePercentage: "10"
       taintToleration: arm=true:NoExecute
       backupTargetCredentialSecret: longhorn-aws-creds
+      backupTarget: "${SECRET_LONGHORN_BACKUP_TARGET}"
     ingress:
       enabled: true
       ingressClassName: "traefik"
