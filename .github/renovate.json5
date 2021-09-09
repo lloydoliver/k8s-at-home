@@ -130,29 +130,6 @@
       "semanticCommitType": "fix",
       "labels": ["renovate/helm", "dep/patch"]
     },
-    // enable auto-merge
-    {
-      "matchDatasources": ["docker"],
-      "automerge": true,
-      "automergeType": "branch",
-      "requiredStatusChecks": null,
-      "matchUpdateTypes": ["minor", "patch"],
-      "schedule": [
-        "after 1am",
-        "before 4am"
-      ]
-    },
-    {
-      "matchDatasources": ["helm"],
-      "automerge": true,
-      "automergeType": "branch",
-      "requiredStatusChecks": null,
-      "matchUpdateTypes": ["minor", "patch"],
-      "schedule": [
-        "after 1am",
-        "before 4am"
-      ]
-    },
     // group packages
     {
       "matchDatasources": ["github-releases", "docker"],
