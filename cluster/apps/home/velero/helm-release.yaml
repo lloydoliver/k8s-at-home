@@ -31,14 +31,18 @@ spec:
           region: eu-west-2
       volumeSnapshotLocation:
         name: default
-        provider: aws
-        config:
-          region: eu-west-2
+        provider: longhorn
       resticTimeout: 6h
     initContainers:
       - name: velero-plugin-for-aws
         image: ghcr.io/k8s-at-home/velero-plugin-for-aws:v1.3.0
         imagePullPolicy: IfNotPresent
+        volumeMounts:
+          - mountPath: /target
+            name: plugins
+      - name: velero-plugin-for-longhorn
+        image: quay.io/jenting/velero-plugin:main
+        imagePullPolicy: ifNotPresent
         volumeMounts:
           - mountPath: /target
             name: plugins
