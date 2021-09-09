@@ -42,7 +42,6 @@ spec:
       daily-backup:
         disabled: false
         schedule: "0 2 * * *"
-        labels: "daily"
         template:
           ttl: "72h"
           includeNamespaces:
