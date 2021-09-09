@@ -25,6 +25,7 @@ spec:
       provider: aws
       backupStorageLocation:
         name: aws
+        provider: aws
         bucket: k8s-at-home
         config:
           region: eu-west-2
@@ -50,7 +51,7 @@ spec:
       enabled: true
       serviceMonitor:
         enabled: true
-    snapshotsEnabled: true
+    snapshotsEnabled: false
     upgradeCRDs: false
     cleanUpCRDs: false
     kubectl:
