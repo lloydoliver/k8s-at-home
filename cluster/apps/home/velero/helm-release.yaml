@@ -30,7 +30,7 @@ spec:
         config:
           region: eu-west-2
       volumeSnapshotLocation:
-        name: aws
+        name: default
         config:
           region: eu-west-2
       resticTimeout: 6h
