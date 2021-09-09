@@ -29,6 +29,10 @@ spec:
         bucket: k8s-at-home
         config:
           region: eu-west-2
+      volumeSnapshotLocation:
+        name: aws
+        config:
+          region: eu-west-2
       resticTimeout: 6h
     initContainers:
       - name: velero-plugin-for-aws
