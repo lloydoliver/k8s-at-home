@@ -44,7 +44,7 @@ spec:
         schedule: "0 2 * * *"
         template:
           ttl: "72h"
-          includeNamespaces:
+          includedNamespaces:
             - home
     metrics:
       enabled: true
