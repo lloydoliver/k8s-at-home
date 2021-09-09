@@ -24,7 +24,7 @@ spec:
         TZ: "Europe/London"
       provider: aws
       backupStorageLocation:
-        name: aws
+        name: default
         provider: aws
         bucket: k8s-at-home
         config:
