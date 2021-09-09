@@ -25,6 +25,7 @@ spec:
       createDefaultDiskLabeledNodes: true
       storageMinimalAvailablePercentage: "10"
       taintToleration: arm=true:NoExecute
+      backupTargetCredentialSecret: longhorn-aws-creds
     ingress:
       enabled: true
       ingressClassName: "traefik"
