@@ -7,7 +7,7 @@
 </br>
 </br>
 
-[![k3s](https://img.shields.io/badge/K3S-v1.21.4-brightgreen?style=for-the-badge&logo=kubernetes&logoColor=white)](https://k3s.io/)
+[![k3s](https://img.shields.io/badge/K3S-v1.21.8-brightgreen?style=for-the-badge&logo=kubernetes&logoColor=white)](https://k3s.io/)
 [![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white&style=for-the-badge)](https://github.com/pre-commit/pre-commit)
 [![renovate](https://img.shields.io/badge/renovate-enabled-brightgreen?style=for-the-badge&logo=renovatebot&logoColor=white)](https://github.com/renovatebot/renovate)
 [![sops](https://img.shields.io/badge/SOPS-encrypted-brightgreen?style=for-the-badge&logo=mozilla&logoColor=white)](https://github.com/mozilla/sops)
