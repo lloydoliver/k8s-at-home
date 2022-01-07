@@ -127,9 +127,6 @@ spec:
       - ^aff(iliat(es?|ion))?[-.]
       - ^(.+[-.])??m?ad[sxv]?[0-9][-.]
 
-    ftl:
-      MAXDBDAYS: 28
-
     podDnsConfig:
       nameservers:
         - 127.0.0.1
