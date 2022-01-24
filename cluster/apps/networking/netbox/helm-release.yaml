@@ -24,6 +24,7 @@ spec:
   values:
     existingSecret: netbox-secrets
     ingress:
+      path: /
       enabled: true
       hosts:
         - host: netbox.${SECRET_DOMAIN}
