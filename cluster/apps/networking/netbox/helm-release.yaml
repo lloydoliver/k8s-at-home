@@ -24,14 +24,22 @@ spec:
   values:
     existingSecret: netbox-secrets
     ingress:
-      path: /
-      enabled: true
-      hosts:
-        - host: netbox.${SECRET_DOMAIN}
-      tls:
-        - secretName: "${SECRET_DOMAIN/./-}-tls"
-          hosts:
-            - netbox.${SECRET_DOMAIN}
+      main:
+        enabled: true
+        ingressClassName: "traefik"
+        annotations:
+          traefik.ingress.kubernetes.io/router.entrypoints: "websecure"
+          hajimari.io/enable: "true"
+          hajimari.io/icon: "netbox"
+          hajimari.io/appName: "Netbox"
+        hosts:
+          - host: "netbox.${SECRET_DOMAIN}"
+            paths:
+              - path: /
+                pathType: Prefix
+        tls:
+          - hosts:
+              - "netbox.${SECRET_DOMAIN}"
       annotations:
         kubernetes.io/ingress.class: traefik
         traefik.ingress.kubernetes.io/rule-type: PathPrefixStrip
@@ -39,7 +47,6 @@ spec:
         cert-manager.io/cluster-issuer: letsencrypt-prod
         hajimari.io/enable: "true"
         hajimari.io/icon: "netbox"
-
     persistence:
       enabled: true
       existingClaim: "netbox-data"
