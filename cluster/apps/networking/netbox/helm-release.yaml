@@ -13,7 +13,7 @@ spec:
       version: 4.0.1
       sourceRef:
         kind: HelmRepository
-        name: netbox
+        name: bootc-charts
         namespace: flux-system
   interval: 5m
   install:
