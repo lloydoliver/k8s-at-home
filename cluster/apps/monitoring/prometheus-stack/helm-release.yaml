@@ -23,5 +23,4 @@ spec:
       retries: 3
   values:
     grafana:
-      ingress:
-        enabled: false
+      enabled: false
