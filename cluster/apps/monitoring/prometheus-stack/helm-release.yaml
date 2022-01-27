@@ -22,4 +22,21 @@ spec:
     remediation:
       retries: 3
   values:
+    grafana:
+      ingress:
+      enabled: true
+      path: /
+      host: "grafana.${SECRET_DOMAIN}"
+      tls:
+        - secretName: "${SECRET_DOMAIN/./-}-tls"
+          hosts:
+            - "grafana.${SECRET_DOMAIN}"
+      annotations:
+        kubernetes.io/ingress.class: traefik
+        traefik.ingress.kubernetes.io/rule-type: PathPrefixStrip
+        kubernetes.io/tls-acme: "true"
+        cert-manager.io/cluster-issuer: letsencrypt-prod
+        hajimari.io/enable: "true"
+        hajimari.io/icon: "Grafana"
+        hajimari.io/appName: "Grafana"
     
