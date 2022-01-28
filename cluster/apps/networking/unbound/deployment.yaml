@@ -26,5 +26,5 @@ spec:
         - image: mvance/unbound-rpi
           name: unbound
           securityContext:
-            privileged: true
+            privileged: false
           resources: {}
