@@ -24,7 +24,7 @@ spec:
       defaultReplicaCount: 3
       createDefaultDiskLabeledNodes: true
       storageMinimalAvailablePercentage: "10"
-      taintToleration: arm=true:NoExecute
+      taintToleration: k3s-controlplan=true:NoExecute
       backupTargetCredentialSecret: longhorn-aws-creds
       backupTarget: "${SECRET_LONGHORN_BACKUP_TARGET}"
     ingress:
