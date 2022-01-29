@@ -27,6 +27,18 @@ spec:
       taintToleration: k3s-controlplan=true:NoExecute
       backupTargetCredentialSecret: longhorn-aws-creds
       backupTarget: "${SECRET_LONGHORN_BACKUP_TARGET}"
+    longhornDriver:
+      tolerations:
+        - key: "k3s-controlplane"
+          operator: "Equal"
+          value: "true"
+          effect: "NoExecute"
+    longhornManager:
+      tolerations:
+        - key: "k3s-controlplane"
+          operator: "Equal"
+          value: "true"
+          effect: "NoExecute"
     ingress:
       enabled: true
       ingressClassName: "traefik"
